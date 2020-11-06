@@ -5,8 +5,14 @@ import scala.annotation.tailrec
 /**
   * Created by Daniel on 07-May-18.
   */
+
+/*
+*   Ejemplos sobre recursividad: https://es.stackoverflow.com/questions/121965/que-es-tail-recursion
+*/
+
 object Recursion extends App {
 
+  /* Recursividad  Regular o Normal*/
   def factorial(n: Int): Int =
     if (n <= 1) 1
     else {
@@ -20,6 +26,7 @@ object Recursion extends App {
   println(factorial(10))
 //  println(factorial(5000))
 
+  /* Recursividad  de cola*/
   def anotherFactorial(n: Int): BigInt = {
     @tailrec
     def factHelper(x: Int, accumulator: BigInt): BigInt =

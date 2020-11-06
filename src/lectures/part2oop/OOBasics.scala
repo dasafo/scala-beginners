@@ -6,6 +6,8 @@ package lectures.part2oop
 object OOBasics extends App {
 
   // constructor
+  // Class parameters are NOT FIELDS, if we want to have parameters of fields we must put(for example)
+  // 'val' before the name of the parameter.
   class Person(name: String, val age: Int = 0) {
     // body
     val x = 2
@@ -27,6 +29,14 @@ object OOBasics extends App {
   println(person.x)
   person.greet("Daniel")
   person.greet()
+  println("")
+
+  //Example for multiple constructors
+  val person2 = new Person("John")
+  println(person2.age)
+  val person3 = new Person()
+  println(person3)
+  println("")
 
   val author = new Writer("Charles", "Dickens", 1812)
   val imposter = new Writer("Charles", "Dickens", 1812)
@@ -75,6 +85,15 @@ class Novel(name: String, year: Int, author: Writer) {
     - overload inc/dec to receive an amount
  */
 class Counter(val count: Int = 0) {
+
+  /*
+  def inc = new Counter(count + 1)
+  def dec = new Counter(count - 1)
+
+  def inc(n: Int) = new Counter(count + n)
+  def dec(n: Int) = new Counter(count - n)
+  */
+
   def inc = {
     println("incrementing")
     new Counter(count + 1)  // immutability

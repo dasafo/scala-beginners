@@ -1,4 +1,5 @@
 package lectures.part2oop
+import scala.language.postfixOps
 
 /**
   * Created by Daniel.
@@ -28,6 +29,7 @@ object MethodNotations extends App {
   val tom = new Person("Tom", "Fight Club")
   println(mary + tom)
   println(mary.+(tom))
+  println("")
 
   println(1 + 2)
   println(1.+(2))
@@ -39,17 +41,20 @@ object MethodNotations extends App {
   val x = -1  // equivalent with 1.unary_-
   val y = 1.unary_-
   // unary_ prefix only works with - + ~ !
-
+  println("")
   println(!mary)
   println(mary.unary_!)
+  println("")
 
   // postfix notation
   println(mary.isAlive)
   println(mary isAlive)
+  println("")
 
   // apply
   println(mary.apply())
   println(mary()) // equivalent
+  println("")
 
   /*
     1.  Overload the + operator

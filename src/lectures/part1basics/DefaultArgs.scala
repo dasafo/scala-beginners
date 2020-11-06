@@ -10,6 +10,7 @@ object DefaultArgs extends App {
     else trFact(n-1, n*acc)
 
   val fact10 = trFact(10, 2)
+  println(fact10)
 
   def savePicture(format: String = "jpg", width: Int = 1920, height: Int = 1080): Unit = println("saving picture")
   savePicture(width = 800)
